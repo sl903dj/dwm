@@ -2,7 +2,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
-static const unsigned int gappx     = 5;        /* gaps between windows */
+static const unsigned int gappx     = 10;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -13,19 +13,21 @@ static const int showsystray             = 1;   /* 0 means no systray */
 static const int vertpad            = 10;       /* vertical padding of bar */
 static const int sidepad            = 10;       /* horizontal padding of bar */
 static const Bool viewontag         = True;     /* Switch view on tag switch */
-static const char *fonts[]          = { "monospace:size=10" };
-static const char dmenufont[]       = "monospace:size=10";
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#005577";
-static const unsigned int baralpha = 0xd0;
-static const unsigned int borderalpha = OPAQUE;
+static const char *fonts[]          = { "JetBrainsMono Nerd Font:style=Regular:size=10:antialias=true:autohint=true",
+                                        "WenQuanYi Micro Hei:style=Regular:size=10:antialias=true:autohint=true" };
+static const char dmenufont[]       = "Hack Nerd Font:style=Regular:sirze=10";
+static const char col_gray1[]       = "#000000"; /* 状态栏底色 */
+static const char col_gray2[]       = "#444444"; /* 当static const unsigned int borderpx不为0时，非活动窗口外边框颜色 */
+static const char col_gray3[]       = "#42A5F5"; /* 当static const unsigned int borderpx不为0时，活动窗口外边框颜色 */
+static const char col_gray4[]       = "#eeeeee"; /* 当前非活动的title字体颜色 */
+static const char col_gray5[]       = "#ffffff"; /* 当前活动的title字体颜色 */
+static const char col_cyan[]        = "#005577"; /* title底色 */
+static const unsigned int baralpha = 0x46;       /* 状态栏透明度 */
+static const unsigned int borderalpha = OPAQUE;  /* 边框透明度 */
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeNorm] = { col_gray4, col_gray1, col_gray2 },
+	[SchemeSel]  = { col_gray5, col_cyan,  col_gray3  },
 };
 static const unsigned int alphas[][3]      = {
 	/*               fg      bg        border*/
@@ -65,7 +67,7 @@ static const Layout layouts[] = {
 };
 
 /* key definitions */
-#define MODKEY Mod1Mask
+#define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
@@ -79,17 +81,36 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *dmenucmd[] = { "rofi", "-combi-modi", "window,drun,run,ssh", "-font", "hack 22", "-show", "combi", "-icon-theme", "Papirus","-show-icons", NULL };
+static const char *termcmd[]  = { "alacritty", NULL };
+static const char *fsearchcmd[]  = { "fsearch", "gui", NULL };
 static const char scratchpadname[] = "scratchpad";
-static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
+static const char *scratchpadcmd[] = { "alacritty", "-t", scratchpadname, "--class", "floatingTerminal" };
+static const char *volumetoggle[] = { "/home/sl903dj/suckless/dwm/scripts/volumetoggle.sh", NULL };
+static const char *volumeup[] = { "amixer", "-q", "sset", "Master", "5%+", "unmute", NULL };
+static const char *volumedown[] = { "amixer", "-q", "sset", "Master", "5%-", "unmute", NULL };
+static const char *inclight[] = { "light", "-A", "10", NULL };
+static const char *declight[] = { "light", "-U", "10", NULL };
+static const char *screenshot[] = { "flameshot", "gui", NULL };
+static const char *delayedscreenshot[] = { "flameshot", "gui", "-d", "2000", NULL };
+static const char *screenlock[] = { "/home/sl903dj/suckless/dwm/scripts/lock.sh", NULL };
 
 #include "movestack.c"
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
+  { 0,                            XF86XK_AudioMute,          spawn,       {.v = volumetoggle} },
+  { 0,                            XF86XK_AudioRaiseVolume,   spawn,       {.v = volumeup} },
+  { 0,                            XF86XK_AudioLowerVolume,   spawn,       {.v = volumedown} },
+  { 0,                            XF86XK_MonBrightnessUp,    spawn,       {.v = inclight} },
+  { 0,                            XF86XK_MonBrightnessDown,  spawn,       {.v = declight} },
+  { 0,                            XK_Print,  spawn,          {.v = screenshot} },
+  { Mod1Mask|ShiftMask,           XK_a,      spawn,          {.v = screenshot} },
+  { Mod1Mask|ShiftMask,           XK_d,      spawn,          {.v = delayedscreenshot} },
+  { MODKEY|ShiftMask,             XK_l,      spawn,          {.v = screenlock} },
+  { MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+  { MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+  { MODKEY|ShiftMask,             XK_f,      spawn,          {.v = fsearchcmd} },
+  { MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
