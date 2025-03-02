@@ -69,4 +69,4 @@ and (re)compiling the source code.
 
 Overview
 --------
-![image](https://github.com/sl903dj/dwm/blob/master/2025-03-01_22-46.png)
+![image](https://github.com/sl903dj/dwm/blob/master/2025-03-02_14-57.png)
