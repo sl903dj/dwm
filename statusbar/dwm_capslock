@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# 检查 CapsLock 状态
+capslock_state=$(xset q | grep "Caps Lock" | awk '{print $4}')
+numlock_state=$(xset q | grep "Num Lock" | awk '{print $8}')
+
+# 构造状态信息
+capslock_display=""
+numlock_display=""
+
+if [ "$capslock_state" == "on" ]; then
+    capslock_display="󰪛"
+fi
+
+if [ "$numlock_state" == "on" ]; then
+    numlock_display="󰎦"
+fi
+
+# 输出状态信息
+echo "$numlock_display $capslock_display"
