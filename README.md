@@ -19,6 +19,25 @@ necessary as root):
     make clean install
 
 
+Patches applied
+---------------
+* [dwm-alpha-barpadding-systray-20250301-05e5624.diff](https://github.com/sl903dj/dwm/blob/master/patches/dwm-alpha-barpadding-systray-20250301-05e5624.diff)
+* [dwm-attachbottom-6.3.diff](https://dwm.suckless.org/patches/attachbottom/dwm-attachbottom-6.3.diff)
+* [dwm-doublepressquit-6.3.diff](https://dwm.suckless.org/patches/doublepressquit/dwm-doublepressquit-6.3.diff)
+* [dwm-fancybar-20220527-d3f93c7.diff](https://dwm.suckless.org/patches/fancybar/dwm-fancybar-20220527-d3f93c7.diff)
+* [dwm-fullgaps-6.4.diff](https://dwm.suckless.org/patches/fullgaps/dwm-fullgaps-6.4.diff)
+* [dwm-gaplessgrid-20160731-56a31dc.diff](https://dwm.suckless.org/patches/gaplessgrid/dwm-gaplessgrid-20160731-56a31dc.diff)
+* [dwm-hide_vacant_tags-6.3.diff](https://dwm.suckless.org/patches/hide_vacant_tags/dwm-hide_vacant_tags-6.3.diff)
+* [dwm-movestack-20211115-a786211.diff](https://dwm.suckless.org/patches/movestack/dwm-movestack-20211115-a786211.diff)
+* [dwm-noborder-6.2.diff](https://dwm.suckless.org/patches/noborder/dwm-noborder-6.2.diff)
+* [dwm-pertag-20200914-61bb8b2.diff](https://dwm.suckless.org/patches/pertag/dwm-pertag-20200914-61bb8b2.diff)
+* [dwm-preview-all-windows-6.5.diff](https://github.com/luo216/preview-all-win/blob/master/dwm-preview-all-windows-6.5.diff)
+* [dwm-restartsig-20180523-6.2.diff](https://dwm.suckless.org/patches/restartsig/dwm-restartsig-20180523-6.2.diff)
+* [dwm-scratchpad-20221102-ba56fe9.diff](https://dwm.suckless.org/patches/scratchpad/dwm-scratchpad-20221102-ba56fe9.diff)
+* [dwm-statuscmd-20241009-8933ebc.diff](https://dwm.suckless.org/patches/statuscmd/dwm-statuscmd-20241009-8933ebc.diff)
+* [dwm-viewontag-20210312-61bb8b2.diff](https://dwm.suckless.org/patches/viewontag/dwm-viewontag-20210312-61bb8b2.diff)
+
+
 Running dwm
 -----------
 Add the following line to your .xinitrc to start dwm using startx:
@@ -46,3 +65,8 @@ Configuration
 -------------
 The configuration of dwm is done by creating a custom config.h
 and (re)compiling the source code.
+
+
+Overview
+--------
+![image](https://github.com/sl903dj/dwm/blob/master/2025-03-01_22-46.png)
