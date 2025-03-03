@@ -975,7 +975,7 @@ drawbar(Monitor *m)
 
 				drw_setscheme(drw, scheme[m == selmon && m->sel == c ? SchemeSel : SchemeNorm]);
 				if (tw > lrpad / 2)
-					drw_text(drw, x, 0, tw - 2 * sp, bh, lrpad / 2, c->name, 0);
+					drw_text(drw, x, 0, tw, bh, lrpad / 2, c->name, 0);
 				if (c->isfloating)
 					drw_rect(drw, x + boxs, boxs, boxw, boxw, c->isfixed, 0);
 				x += tw;
@@ -983,7 +983,7 @@ drawbar(Monitor *m)
 			}
 		}
 		drw_setscheme(drw, scheme[SchemeNorm]);   
-		drw_rect(drw, x, 0, w - 2 * sp, bh, 1, 1);	}
+		drw_rect(drw, x, 0, w, bh, 1, 1);	}
 	drw_map(drw, m->barwin, 0, 0, m->ww - stw, bh);
 }
 
