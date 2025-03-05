@@ -21,7 +21,7 @@ necessary as root):
 
 Patches applied
 ---------------
-* [dwm-alpha-barpadding-systray-20250301-05e5624.diff](https://github.com/sl903dj/dwm/blob/master/patches/dwm-alpha-barpadding-systray-20250301-05e5624.diff)
+* [dwm-alpha-barpadding-systray-20250301-05e5624.diff](https://github.com/sl903dj/dwm/blob/master/patches/dwm-alpha-barpadding-systray-20250301-05e5624.diff) (forked from [elbachir-one](https://github.com/elbachir-one/dotfiles/blob/master/src/dwm-fixed-patches/dwm-alpha-barpadding-systray-status2d-20241024-25bfd10.diff))
 * [dwm-attachbottom-6.3.diff](https://dwm.suckless.org/patches/attachbottom/dwm-attachbottom-6.3.diff)
 * [dwm-doublepressquit-6.3.diff](https://dwm.suckless.org/patches/doublepressquit/dwm-doublepressquit-6.3.diff)
 * [dwm-fancybar-20220527-d3f93c7.diff](https://dwm.suckless.org/patches/fancybar/dwm-fancybar-20220527-d3f93c7.diff)
@@ -31,7 +31,7 @@ Patches applied
 * [dwm-movestack-20211115-a786211.diff](https://dwm.suckless.org/patches/movestack/dwm-movestack-20211115-a786211.diff)
 * [dwm-noborder-6.2.diff](https://dwm.suckless.org/patches/noborder/dwm-noborder-6.2.diff)
 * [dwm-pertag-20200914-61bb8b2.diff](https://dwm.suckless.org/patches/pertag/dwm-pertag-20200914-61bb8b2.diff)
-* [dwm-pointerfocuswin-0.1.diff](https://github.com/sl903dj/dwm/blob/master/patches/dwm-pointerfocuswin-0.1.diff)
+* [dwm-pointerfocuswin-0.1.diff](https://github.com/sl903dj/dwm/blob/master/patches/dwm-pointerfocuswin-0.1.diff) (forked from [yaoccc/dwm](https://github.com/yaocccc/dwm))
 * [dwm-preview-all-windows-6.5.diff](https://github.com/luo216/preview-all-win/blob/master/dwm-preview-all-windows-6.5.diff)
 * [dwm-restartsig-20180523-6.2.diff](https://dwm.suckless.org/patches/restartsig/dwm-restartsig-20180523-6.2.diff)
 * [dwm-scratchpad-20221102-ba56fe9.diff](https://dwm.suckless.org/patches/scratchpad/dwm-scratchpad-20221102-ba56fe9.diff)
