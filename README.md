@@ -21,7 +21,7 @@ necessary as root):
 
 Patches applied
 ---------------
-* [dwm-alpha-barpadding-systray-20250301-05e5624.diff](https://github.com/sl903dj/dwm/blob/master/patches/dwm-alpha-barpadding-systray-20250301-05e5624.diff) (forked from [elbachir-one](https://github.com/elbachir-one/dotfiles/blob/master/src/dwm-fixed-patches/dwm-alpha-barpadding-systray-status2d-20241024-25bfd10.diff))
+* [dwm-alpha-barpadding-systray-20250303-cedf928.diff](https://github.com/sl903dj/dwm/blob/master/patches/dwm-alpha-barpadding-systray-20250303-cedf928.diff) (forked from [elbachir-one](https://github.com/elbachir-one/dotfiles/blob/master/src/dwm-fixed-patches/dwm-alpha-barpadding-systray-status2d-20241024-25bfd10.diff))
 * [dwm-attachbottom-6.3.diff](https://dwm.suckless.org/patches/attachbottom/dwm-attachbottom-6.3.diff)
 * [dwm-doublepressquit-6.3.diff](https://dwm.suckless.org/patches/doublepressquit/dwm-doublepressquit-6.3.diff)
 * [dwm-fancybar-20220527-d3f93c7.diff](https://dwm.suckless.org/patches/fancybar/dwm-fancybar-20220527-d3f93c7.diff)
