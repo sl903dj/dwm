@@ -31,6 +31,7 @@ Patches applied
 * [dwm-movestack-20211115-a786211.diff](https://dwm.suckless.org/patches/movestack/dwm-movestack-20211115-a786211.diff)
 * [dwm-noborder-6.2.diff](https://dwm.suckless.org/patches/noborder/dwm-noborder-6.2.diff)
 * [dwm-pertag-20200914-61bb8b2.diff](https://dwm.suckless.org/patches/pertag/dwm-pertag-20200914-61bb8b2.diff)
+* [dwm-pointerfocuswin-0.1.diff](https://github.com/sl903dj/dwm/blob/master/patches/dwm-pointerfocuswin-0.1.diff)
 * [dwm-preview-all-windows-6.5.diff](https://github.com/luo216/preview-all-win/blob/master/dwm-preview-all-windows-6.5.diff)
 * [dwm-restartsig-20180523-6.2.diff](https://dwm.suckless.org/patches/restartsig/dwm-restartsig-20180523-6.2.diff)
 * [dwm-scratchpad-20221102-ba56fe9.diff](https://dwm.suckless.org/patches/scratchpad/dwm-scratchpad-20221102-ba56fe9.diff)
