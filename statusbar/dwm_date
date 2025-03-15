@@ -1,10 +1,31 @@
 #!/bin/sh
 
+case "$BLOCK_BUTTON" in
+6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+esac
+
+# 获取当前12小时制的小时（去除前导零）
+HOUR_12=$(date +"%I" | sed 's/^0//')
+
+# 定义图标数组（12小时制专用）
+UNICODE_ICONS=("🕐" "🕑" "🕒" "🕓" "🕔" "🕕" "🕖" "🕗" "🕘" "🕙" "🕚" "🕛") # 1~12点
+NERD_ICONS=("󱑋" "󱑌" "󱑍" "󱑎" "󱑏" "󱑐" "󱑑" "󱑒" "󱑓" "󱑔" "󱑕" "󱑖")    # Nerd Font
+
+# 计算索引（0~11对应1~12点）
+INDEX=$((HOUR_12 - 1))
+
 printf "%s" "$SEP1"
 if [ "$IDENTIFIER" = "unicode" ]; then
-    printf "📆 %s" "$(date +"%d-%m-%y %a %H:%M")"
+  # 格式：日期 + 图标 + 时间（示例：15-07-24 Mon 🕒 03:30）
+  printf "%s %s %s" \
+    "$(date +"%d-%m-%y %a")" \
+    "${UNICODE_ICONS[$INDEX]}" \
+    "$(date +"%I:%M:%S")"
 else
-    # printf "󰃭 %s" "$(date +"%m/%d %a  %H:%M:%S")"
-    printf "%s" "$(date +"%-m月%d日%A  %H:%M:%S")"
+  # 格式：日期 + 图标 + 时间（示例：7月15日星期一 󱑍 03:30:15）
+  printf "%s %s %s" \
+    "$(date +"%-m月%d日%A")" \
+    "${NERD_ICONS[$INDEX]}" \
+    "$(date +"%I:%M:%S")"
 fi
 printf "%s\n" "$SEP2"

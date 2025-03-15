@@ -1,4 +1,8 @@
-#!/bin/bash
+#!/bin/sh
+
+case "$BLOCK_BUTTON" in
+6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+esac
 
 # 检查 CapsLock 状态
 capslock_state=$(xset q | grep "Caps Lock" | awk '{print $4}')
@@ -8,12 +12,16 @@ numlock_state=$(xset q | grep "Num Lock" | awk '{print $8}')
 capslock_display=""
 numlock_display=""
 
-if [ "$capslock_state" == "on" ]; then
-    capslock_display="󰪛"
+if [ "$capslock_state" == "off" ]; then
+  capslock_display=" "
+else
+  capslock_display="󰪛"
 fi
 
-if [ "$numlock_state" == "on" ]; then
-    numlock_display="󰎦"
+if [ "$numlock_state" == "off" ]; then
+  numlock_display=" "
+else
+  numlock_display="󰎦"
 fi
 
 # 输出状态信息

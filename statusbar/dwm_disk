@@ -1,5 +1,9 @@
 #!/bin/sh
 
-disk_free=$(df -hl | awk 'NR==5{print $4}')
-disk_total=$(df -hl | awk 'NR==5{print $2}')
+case "$BLOCK_BUTTON" in
+6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+esac
+
+disk_free=$(df -h | awk 'NR==5{print $4}')
+disk_total=$(df -h | awk 'NR==5{print $2}')
 echo -e "󰋊 $disk_free|$disk_total"
