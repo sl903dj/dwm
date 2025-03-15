@@ -98,19 +98,19 @@ static const char *screenlock[] = { "/home/sl903dj/suckless/dwm/scripts/lock.sh"
 #include "movestack.c"
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-  { 0,                            XF86XK_AudioMute,          spawn,       {.v = volumetoggle} },
-  { 0,                            XF86XK_AudioRaiseVolume,   spawn,       {.v = volumeup} },
-  { 0,                            XF86XK_AudioLowerVolume,   spawn,       {.v = volumedown} },
-  { 0,                            XF86XK_MonBrightnessUp,    spawn,       {.v = inclight} },
-  { 0,                            XF86XK_MonBrightnessDown,  spawn,       {.v = declight} },
-  { 0,                            XK_Print,  spawn,          {.v = screenshot} },
-  { Mod1Mask|ShiftMask,           XK_a,      spawn,          {.v = screenshot} },
-  { Mod1Mask|ShiftMask,           XK_d,      spawn,          {.v = delayedscreenshot} },
-  { MODKEY|ShiftMask,             XK_l,      spawn,          {.v = screenlock} },
-  { MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-  { MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
-  { MODKEY|ShiftMask,             XK_f,      spawn,          {.v = fsearchcmd} },
-  { MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
+	{ 0,                            XF86XK_AudioMute,          spawn,       {.v = volumetoggle} },
+	{ 0,                            XF86XK_AudioRaiseVolume,   spawn,       {.v = volumeup} },
+	{ 0,                            XF86XK_AudioLowerVolume,   spawn,       {.v = volumedown} },
+	{ 0,                            XF86XK_MonBrightnessUp,    spawn,       {.v = inclight} },
+	{ 0,                            XF86XK_MonBrightnessDown,  spawn,       {.v = declight} },
+	{ 0,                            XK_Print,  spawn,          {.v = screenshot} },
+	{ Mod1Mask|ShiftMask,           XK_a,      spawn,          {.v = screenshot} },
+	{ Mod1Mask|ShiftMask,           XK_d,      spawn,          {.v = delayedscreenshot} },
+	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = screenlock} },
+	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY|ShiftMask,             XK_f,      spawn,          {.v = fsearchcmd} },
+	{ MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
@@ -148,8 +148,8 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
-	{ MODKEY|ControlMask|ShiftMask, XK_q,      quit,           {1} }, 
- 	{ MODKEY,                       XK_q,      previewallwin,  {0} },
+	{ MODKEY|ControlMask|ShiftMask, XK_q,      quit,           {1} },
+	{ MODKEY,                       XK_q,      previewallwin,  {0} },
 };
 
 /* button definitions */
@@ -162,6 +162,9 @@ static const Button buttons[] = {
 	{ ClkStatusText,        0,              Button1,        sigstatusbar,   {.i = 1} },
 	{ ClkStatusText,        0,              Button2,        sigstatusbar,   {.i = 2} },
 	{ ClkStatusText,        0,              Button3,        sigstatusbar,   {.i = 3} },
+	{ ClkStatusText,        0,              Button4,        sigstatusbar,   {.i = 4} },
+	{ ClkStatusText,        0,              Button5,        sigstatusbar,   {.i = 5} },
+	{ ClkStatusText,        MODKEY,         Button1,        sigstatusbar,   {.i = 6} },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
 	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
