@@ -82,10 +82,10 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "rofi", "-combi-modi", "window,drun,run,ssh", "-font", "hack 22", "-show", "combi", "-icon-theme", "Papirus","-show-icons", NULL };
-static const char *termcmd[]  = { "alacritty", NULL };
+static const char *termcmd[]  = { "st", NULL };
 static const char *fsearchcmd[]  = { "fsearch", "gui", NULL };
 static const char scratchpadname[] = "scratchpad";
-static const char *scratchpadcmd[] = { "alacritty", "-t", scratchpadname, "--class", "floatingTerminal" };
+static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "100x26", NULL };
 static const char *volumetoggle[] = { "/home/sl903dj/suckless/dwm/scripts/volumetoggle.sh", NULL };
 static const char *volumeup[] = { "amixer", "-q", "sset", "Master", "5%+", "unmute", NULL };
 static const char *volumedown[] = { "amixer", "-q", "sset", "Master", "5%-", "unmute", NULL };
