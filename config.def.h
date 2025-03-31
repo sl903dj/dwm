@@ -86,14 +86,14 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *fsearchcmd[]  = { "fsearch", "gui", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "100x26", NULL };
-static const char *volumetoggle[] = { "/home/sl903dj/suckless/dwm/scripts/volumetoggle.sh", NULL };
+static const char *volumetoggle[] = { "volumetoggle.sh", NULL };
 static const char *volumeup[] = { "amixer", "-q", "sset", "Master", "5%+", "unmute", NULL };
 static const char *volumedown[] = { "amixer", "-q", "sset", "Master", "5%-", "unmute", NULL };
 static const char *inclight[] = { "light", "-A", "10", NULL };
 static const char *declight[] = { "light", "-U", "10", NULL };
 static const char *screenshot[] = { "flameshot", "gui", NULL };
 static const char *delayedscreenshot[] = { "flameshot", "gui", "-d", "2000", NULL };
-static const char *screenlock[] = { "/home/sl903dj/suckless/dwm/scripts/lock.sh", NULL };
+static const char *screenlock[] = { "lock.sh", NULL };
 
 #include "movestack.c"
 static const Key keys[] = {
