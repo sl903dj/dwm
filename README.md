@@ -71,3 +71,4 @@ and (re)compiling the source code.
 Overview
 --------
 ![image](https://github.com/sl903dj/dwm/blob/master/2025-03-02_14-57.png)
+![image](https://github.com/sl903dj/dwm/blob/master/snapshot_2025-04-16_093704_030.png)
