@@ -81,7 +81,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "rofi", "-combi-modi", "window,drun,run,ssh", "-font", "hack 22", "-show", "combi", "-icon-theme", "Papirus","-show-icons", NULL };
+static const char *dmenucmd[] = { "rofi", "-show", "drun", NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *fsearchcmd[]  = { "fsearch", "gui", NULL };
 static const char scratchpadname[] = "scratchpad";
