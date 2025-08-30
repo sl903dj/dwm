@@ -95,6 +95,7 @@ static const char *declight[] = { "light", "-U", "10", NULL };
 static const char *screenshot[] = { "flameshot", "gui", NULL };
 static const char *delayedscreenshot[] = { "flameshot", "gui", "-d", "2000", NULL };
 static const char *screenlock[] = { "lock.sh", NULL };
+static const char *wechattoggle[] = { "wechattoggle.sh", NULL };
 
 #include "movestack.c"
 static const Key keys[] = {
@@ -112,6 +113,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_f,      spawn,          {.v = fsearchcmd} },
 	{ MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
+	{ MODKEY,                       XK_w,      spawn,          {.v = wechattoggle } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
