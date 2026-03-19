@@ -26,6 +26,7 @@ Patches applied
 * [dwm-doublepressquit-6.3.diff](https://dwm.suckless.org/patches/doublepressquit/dwm-doublepressquit-6.3.diff)
 * [dwm-fancybar-20220527-d3f93c7.diff](https://dwm.suckless.org/patches/fancybar/dwm-fancybar-20220527-d3f93c7.diff)
 * [dwm-fullgaps-6.4.diff](https://dwm.suckless.org/patches/fullgaps/dwm-fullgaps-6.4.diff)
+* [dwm-fibonacci-6.2.diff](https://dwm.suckless.org/patches/fibonacci/dwm-fibonacci-6.2.diff)
 * [dwm-gaplessgrid-20160731-56a31dc.diff](https://dwm.suckless.org/patches/gaplessgrid/dwm-gaplessgrid-20160731-56a31dc.diff)
 * [dwm-hide_vacant_tags-6.3.diff](https://dwm.suckless.org/patches/hide_vacant_tags/dwm-hide_vacant_tags-6.3.diff)
 * [dwm-movestack-20211115-a786211.diff](https://dwm.suckless.org/patches/movestack/dwm-movestack-20211115-a786211.diff)
