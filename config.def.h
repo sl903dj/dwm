@@ -15,7 +15,6 @@ static const int sidepad            = 10;       /* horizontal padding of bar */
 static const Bool viewontag         = True;     /* Switch view on tag switch */
 static const char *fonts[]          = { "JetBrainsMono Nerd Font:style=Regular:size=10:antialias=true:autohint=true",
                                         "WenQuanYi Micro Hei:style=Regular:size=10:antialias=true:autohint=true" };
-static const char dmenufont[]       = "Hack Nerd Font:style=Regular:sirze=10";
 static const char col_gray1[]       = "#000000"; /* 状态栏底色 */
 static const char col_gray2[]       = "#444444"; /* 当static const unsigned int borderpx不为0时，非活动窗口外边框颜色 */
 static const char col_gray3[]       = "#42A5F5"; /* 当static const unsigned int borderpx不为0时，活动窗口外边框颜色 */
@@ -87,7 +86,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "rofi", "-show", "drun", NULL };
+static const char *dmenucmd[] = { "dmenu_desktop", NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *fsearchcmd[]  = { "fsearch", "gui", NULL };
 static const char scratchpadname[] = "scratchpad";
